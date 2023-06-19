@@ -7,7 +7,7 @@ restartfile="/opt/puppetlabs/server/data/<%= EZBake::Config[:real_name] %>/resta
 start_timeout="${START_TIMEOUT:-<%= EZBake::Config[:start_timeout] %>}"
 
 realname="<%= EZBake::Config[:real_name] %>"
-rundir="/var/run/puppetlabs/${realname}"
+rundir="/run/puppetlabs/${realname}"
 PIDFILE="${rundir}/${realname}.pid"
 
 if [ ! -e "${INSTALL_DIR}/ezbake-functions.sh" ]; then
